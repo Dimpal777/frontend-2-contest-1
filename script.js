@@ -1,16 +1,17 @@
 /** @format */
 
 let arr = [
-  { id: 10, name: "Dhiraj", age: "30", profession: "support developer" },
+  { id: 10, name: "Dhiraj", age: "30", profession: "support" },
   { id: 9, name: "Niraj", age: "22", profession: "developer" },
   { id: 8, name: "Suraj", age: "40", profession: "ceo" },
 ];
 
 function PrintDeveloperswithMap() {
   //Write your code here
-   function printingThroghMap(arrayItem) {
-    if (arrayItem.profession === "support developer") {
-      console.log(arrayItem);
+  arr.map(checksupport);
+   function checksupport(data) {
+    if (data.profession === "support") {
+      console.log(data);
     }
   }
 }
@@ -19,8 +20,9 @@ function PrintDeveloperswithMap() {
 
 function PrintDeveloperbyForEach() {
   //Write your code here
-function printingThroghForEach(arrayItem) {
-    if (arrayItem.profession === "developer ") {
+  arr.map(checksupport);
+function checksupport(arrayItem) {
+    if (arrayItem.profession === "developer") {
       console.log(arrayItem);
     }
   }
@@ -57,7 +59,7 @@ function concatenateArray() {
     { id: 4, name: "Ruhi", age: "31", profession: "manager " },
   ];
  
-  
+
   let concatArray = arr.concat(arr2);
   console.log(concatArray);
 }
